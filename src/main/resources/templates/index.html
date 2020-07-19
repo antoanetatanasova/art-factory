@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <title>Art Factory</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon"
+     href="https://res.cloudinary.com/the-potential/image/upload/v1595087090/art-factory/icons/favicon_mtychs.png" />
+    <meta name="description" content="<p>Официална страница на училилището за ръчно творчество Art Factory</p>" />
+</head>
+<body>
+    <header>
+        <section class="navigation">
+        <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087134/art-factory/icons/user_v2pjm5.png", width=18> <a href = "login.html" data-toggle="modal" data-target="#loginModal">Вход</a> | <a href = "registration.html" data-toggle="modal" data-target="#registerModal">Регистрация</a> </p>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="loginModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form action="/action_page.php">
+                  <div class="container">
+                    <h2>Вход</h2>
+                    Ако все още нямате профил, направете <a href="#">РЕГИСТРАЦИЯ</a>.
+                    <label for="email"><b></b></label>
+                    <input type="text" placeholder="Email" name="email" id="email" required>
+
+                    <label for="psw"><b></b></label>
+                    <input type="password" placeholder="Парола" name="psw" id="psw" required>
+
+                  </div>
+                </form>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="submit" class="registerbtn">ВХОД</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="registerModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                <form action="/action_page.php">
+                  <div class="container">
+                    <h2>Регистриране на нов потребител</h2>
+                    <p>Попълнете формата, за да създадете нов профил, или <a href="#">ВХОД</a>, ако вече имате регистрация.</p>
+                    <hr>
+
+                    <label for="email"><b></b></label>
+                    <input type="text" placeholder="Email" name="email" id="email" required>
+
+                    <label for="psw"><b></b></label>
+                    <input type="password" placeholder="Парола" name="psw" id="psw" required>
+
+                    <label for="psw-repeat"><b></b></label>
+                    <input type="password" placeholder="Потвърдете паролата" name="psw-repeat" id="psw-repeat" required>
+                    <hr>
+                    <p>Създавайки профил, Вие се съгласявате с нашите <a href="#">Условия за ползване на сайта и Политика на поверителност</a>.</p>
+
+
+                  </div>
+
+                </form>
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <p class="site-title justify-content-center">Art<span>Fact<img src="img\logo.png", width=20/>ry</i></span></p>
+        <p><nav>
+          <div class="container-fluid">
+        <ul class="nav nav-tabs justify-content-center">
+            <li class="nav-item"><a href = "index.html">НАЧАЛО</a></li>
+            <li class="nav-item"><a href = "index.html">ПРОГРАМА</a></li>
+            <li class="nav-item dropdown"><a href = "voucher.html">ВАУЧЕРИ</a></li>
+            <li class="nav-item"><a href = "video.html">ВИДЕО УРОЦИ</a></li>
+            <li class="nav-item"><a href = "service.html">УСЛУГИ</a></li>
+            <li class="nav-item"><a href = "about.html">ЗА НАС</a></li>
+            <li class="nav-item"><a href = "contact.html">КОНТАКТИ</a></li>
+            <li>
+                <ul>
+                    <li><a href = "#"><i class = "img/facebook"></i></a></li>
+                    <li><a href = "#"><i class = "img/instagram"></i></a></li>
+                </ul>
+            </li>
+        </ul>
+      </div>
+      </nav></p>
+    </section>
+    <div class="container-fluid">
+    <section class="site-header">
+        <h1>Ръчно творчество за деца и възрастни.</h1>
+        <a class="btn btn-primary" href="service.html">ПРОГРАМА</a>
+    </section>
+    </div>
+</header>
+<main>
+  <div class="containter">
+    <section class="welcome">
+        <h2>Добре дошли в Art Factory!</h2>
+        <p>Art Factory е място за изкуство и провокации.</p>
+        <p>Art Factory е място точно за Вас.</p>
+    </section>
+    <section class="classes">
+        <h2>Предстоящи работилници</h2>
+    <ul>
+      <li>
+      <div class="card">
+        <img src="https://res.cloudinary.com/the-potential/image/upload/v1595087226/art-factory/workshops/person-holding-putty-knife-3959012_wknmmd.jpg" alt="Работилница" style="width:100%">
+        <h1>Име на работилницата</h1>
+        <p class="price">19.99 лв.</p>
+        <p>Работилница за деца или работилница за възрастни.</p>
+        <p><button>ПОВЕЧЕ</button></p>
+      </div>
+    </li>
+    <li>
+</section>
+</div>
+</main>
+<footer>
+    <p class="copyright justify-content-center">Copyright &copy 2020 antoanetatanasova</p>
+</footer>
+        </body>
+</html>

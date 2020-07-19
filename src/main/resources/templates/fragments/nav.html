@@ -1,0 +1,86 @@
+<th:block xmlns:th="https://www.thymeleaf.org/">
+        <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087134/art-factory/icons/user_v2pjm5.png", width=18> <a href = "login.html" data-toggle="modal" data-target="#loginModal">Вход</a> | <a href = "registration.html" data-toggle="modal" data-target="#registerModal">Регистрация</a> </p>
+
+        <!-- The Modal -->
+        <div class="modal fade" id="loginModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="container">
+                                <h2>Вход</h2>
+                                Ако все още нямате профил, направете <a href="#">РЕГИСТРАЦИЯ</a>.
+                                <label for="email"><b></b></label>
+                                <input type="text" placeholder="Email" name="email" id="email" required>
+
+                                <label for="psw"><b></b></label>
+                                <input type="password" placeholder="Парола" name="psw" id="psw" required>
+
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="registerbtn">ВХОД</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="registerModal">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        <form action="/action_page.php">
+                            <div class="container">
+                                <h2>Регистриране на нов потребител</h2>
+                                <p>Попълнете формата, за да създадете нов профил, или <a href="#">ВХОД</a>, ако вече имате регистрация.</p>
+                                <hr>
+
+                                <label for="email"><b></b></label>
+                                <input type="text" placeholder="Email" name="email" id="email" required>
+
+                                <label for="psw"><b></b></label>
+                                <input type="password" placeholder="Парола" name="psw" id="psw" required>
+
+                                <label for="psw-repeat"><b></b></label>
+                                <input type="password" placeholder="Потвърдете паролата" name="psw-repeat" id="psw-repeat" required>
+                                <hr>
+                                <p>Създавайки профил, Вие се съгласявате с нашите <a href="#">Условия за ползване на сайта и Политика на поверителност</a>.</p>
+
+
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <p class="site-title justify-content-center">Art<span>Fact<img src="img\logo.png", width=20/>ry</i></span></p>
+        <p><nav>
+            <div class="container-fluid">
+                <ul class="nav nav-tabs justify-content-center">
+                    <li class="nav-item"><a href = "index.html">НАЧАЛО</a></li>
+                    <li class="nav-item"><a href = "index.html">ПРОГРАМА</a></li>
+                    <li class="nav-item dropdown"><a href = "voucher.html">ВАУЧЕРИ</a></li>
+                    <li class="nav-item"><a href = "video.html">ВИДЕО УРОЦИ</a></li>
+                    <li class="nav-item"><a href = "service.html">УСЛУГИ</a></li>
+                    <li class="nav-item"><a href = "about.html">ЗА НАС</a></li>
+                    <li class="nav-item"><a href = "contact.html">КОНТАКТИ</a></li>
+                </ul>
+            </div>
+        </nav></p>
+</th:block>

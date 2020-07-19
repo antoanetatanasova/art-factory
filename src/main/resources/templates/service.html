@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Factory</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="javascript.js"></script>
+    <link rel="icon" type="image/vnd.microsoft.icon"
+     href="img\favicon.ico" />
+     <meta name="description" content="<p>Официална страница на училилището за ръчно творчество Art Factory</p>"
+</head>
+<body>
+    <header>
+        <section class="navigation">
+        <p><img src="img\user.png", width=18> <a href = "login.html">Вход</a> | <a href = "registration.html">Регистрация</a> <span> </span><img src="img\search.png", width="18"> </p>
+        <p class="site-title">Art<span>Fact<img src="img\logo.png", width=20/>ry</i></span></p>
+        <p><nav>
+        <ul>
+            <li><a href = "index.html">РАБОТИЛНИЦИ</a></li>
+            <li><a href = "voucher.html">ПОДАРИ ВАУЧЕР</a></li>
+            <li><a href = "video.html">ВИДЕО УРОЦИ</a></li>
+            <li><a href = "service.html">УСЛУГИ</a></li>
+            <li><a href = "about.html">ЗА НАС</a></li>
+            <li><a href = "contact.html">КОНТАКТИ</a></li>
+            <li>
+                <ul>
+                    <li><a href = "#"><i class = "img/facebook"></i></a></li>
+                    <li><a href = "#"><i class = "img/instagram"></i></a></li>
+                </ul>
+                <main>
+            </li партита>
+        </ul>
+      </nav></p>
+</header>
+<main>
+<body>
+  <h2>Нашите услуги</h2>
+
+<p>Ние от Art Factory предлагаме богато портфолио от творчески услуги. Научете повече от съдържанието по-долу и се свържете с нас за повече информация и индивидуална оферта. Следете ни за нови предложения.</p>
+<button class="collapsible">Работилници</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Арт събития</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Тиймбилдинг</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<button class="collapsible">Фотография</button>
+<div class="content">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+}
+</script>
+</main>
+</body>
+<footer>
+    <p>Copyright &copy 2020 antoanetatanasova</p>
+    <ul>
+        <li><a href="#"><i class="img/facebook"></i></a></li>
+        <li><a href="#"><i class="img/instagram"></i></a></li>
+    </ul>
+</footer>
+        </body>

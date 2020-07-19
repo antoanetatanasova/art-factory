@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+@import url('https://fonts.googleapis.com/css?family=PT+Serif');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+body {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0;
+  font-size: 16px;
+  font-family: "PT Sans", sans-serif;
+}
+
+/*for all page*/
+ul {
+  padding: 0;
+}
+
+ul li {
+  display: inline-block;
+}
+
+a {
+    text-decoration: none;
+  }
+
+  span {
+    color: #D63CAB;
+  }
+
+  h2 {
+    font-family: "PT Serif",
+    serif;
+    font-size: 26px;
+    letter-spacing: 2px;
+    font-style: italic;
+    margin: 0;
+    padding-bottom: 35px;
+  }
+
+  /*navigation*/
+.navigation {
+    padding: 0 20px;
+  }
+
+  header .site-title {
+    font-size: 32px;
+    /* display: inline-block */;
+    width: 100%;
+    font-family: 'Great Vibes', cursive;
+    font-style: italic;
+    text-align:center;
+  }
+
+  nav {
+    /* display: inline-block; */
+  }
+
+  nav ul li:not(:last-child) {
+    padding-right: 15px;
+  }
+
+  nav ul li a {
+    color: black;
+  }
+
+  nav ul li a:hover {
+    color: #D63CAB;
+  }
+
+  .navigation > nav > ul >
+  li:nth-child(6) > ul {
+    padding-left: 15px;
+  }
+
+  .navigation > nav > ul >
+  li:nth-child(6) > ul li:not(:last-child) {
+    padding-right: 5px;
+  }
+
+  .navigation > nav > ul >
+  li:nth-child(6) > ul li a i {
+    border: 1px solid black;
+    border-radius: 50%;
+    padding: 5px;
+  }
+
+  /*site-header*/
+.site-header {
+    background:
+    /* linear-gradient(rgba(0,0,0,0.3), */
+    /* rgba(0,0,0,0.6)), */
+    url("https://res.cloudinary.com/the-potential/image/upload/v1595087174/art-factory/workshops/art-factory-main_yrp1nb.jpg") no-repeat center;
+     background-size: cover;
+  }
+
+  .site-header h1 {
+    margin: 0;
+    color: white;
+    font-size: 50px;
+    padding: 200px 0 50px 100px;
+    width: 500px;
+    letter-spacing: 2px;
+  }
+
+  .
+   button {
+    margin: 0 0 200px 100px;
+    padding: 10px 15px;
+    font-size: 26px;
+    color: white;
+    background: #D63CAB;
+    border: 2px solid #D63CAB;
+    border-radius: 20px;
+  }
+
+  .site-header button:hover {
+    background: #D63CAB;
+    color: white;
+    border-color: #D63CAB;
+  }
+
+/*main welcome*/
+.welcome {
+  color: #5a7c8a;
+  text-align: center;
+  width: 60%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+/*product card*/
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  margin: auto;
+  text-align: center;
+  font-family: "PT Serif";
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  background-color: #D63CAB;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.card button:hover {
+  background-color: #1F9EFF;
+}
+
+/*about us flip cards*/
+/* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  /*border: 1px solid #f1f1f1;*/
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 1.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background-color: #D63CAB;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+/*service page*/
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+}
+
+/*Contact form*/
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #D63CAB;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+input[type=submit]:hover {
+  background-color: #1F9EFF;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+/*End Contact form*/
+.container {
+display: inline-grid;
+}
+
+/*register form*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 16px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #D63CAB;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.registerbtn:hover {
+  background-color: #1F9EFF;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.two-collumns {
+    display:flex;
+}
+
+.centered {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    width: 50%;
+    min-width: 100px;
+}
+
+footer{
+  background: #D63CAB;
+}
+
+footer p {
+text-align: center;
+color: white;
+}
