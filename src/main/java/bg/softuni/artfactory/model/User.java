@@ -16,12 +16,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="users")
-public class User {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="id", nullable=false, updatable=false)
-    private long id;
+public class User extends BaseEntity {
 
     @NotNull
     @Column(name="email", nullable = false, unique = true)
@@ -39,14 +34,6 @@ public class User {
     private List<Role> roles = new ArrayList<>();
 
     public User() {
-    }
-
-    public long getId() {
-        return id;
-    }
-
-    public void setId(long id) {
-        this.id = id;
     }
 
     public String getEmail() {
