@@ -1,0 +1,48 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-workshops-table
+      author: Antoaneta Atanasova
+      changes:
+        - createTable:
+            tableName: workshops
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: name
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: LONGTEXT
+              - column:
+                  name: image_url
+                  type: LONGTEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: price
+                  type: DECIMAL
+                  constraints:
+                    nullable: false
+              - column:
+                  name: starts_on
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: ends_on
+                  type: datetime
+                  constraints:
+                    nullable: false
+              - column:
+                  name: max_places
+                  type: INT
+                  constraints:
+                    nullable: false
