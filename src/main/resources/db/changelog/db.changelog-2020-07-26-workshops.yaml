@@ -20,10 +20,10 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: description
-                  type: LONGTEXT
+                  type: varchar(2000)
               - column:
                   name: image_url
-                  type: LONGTEXT
+                  type: varchar(2000)
                   constraints:
                     nullable: false
               - column:
