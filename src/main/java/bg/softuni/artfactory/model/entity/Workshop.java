@@ -1,4 +1,6 @@
-package bg.softuni.artfactory.model;
+package bg.softuni.artfactory.model.entity;
+
+import bg.softuni.artfactory.model.entity.BaseEntity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -12,7 +14,7 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "workshops")
-public class Workshop extends BaseEntity{
+public class Workshop extends BaseEntity {
 
     @NotNull
     @Column(name = "name")

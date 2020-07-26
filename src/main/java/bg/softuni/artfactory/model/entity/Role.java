@@ -1,4 +1,6 @@
-package bg.softuni.artfactory.model;
+package bg.softuni.artfactory.model.entity;
+
+import bg.softuni.artfactory.model.entity.BaseEntity;
 
 import javax.persistence.*;
 

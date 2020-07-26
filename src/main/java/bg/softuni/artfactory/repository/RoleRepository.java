@@ -1,6 +1,6 @@
 package bg.softuni.artfactory.repository;
 
-import bg.softuni.artfactory.model.Role;
+import bg.softuni.artfactory.model.entity.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
