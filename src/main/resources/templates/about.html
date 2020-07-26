@@ -1,36 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg" xmlns:th="https://www.thymeleaf.org/">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Art Factory</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="javascript.js"></script>
-    <link rel="icon" type="image/vnd.microsoft.icon"
-     href="img\favicon.ico" />
-     <meta name="description" content="<p>Официална страница на училилището за ръчно творчество Art Factory</p>">
+    <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
     <header>
         <section class="navigation">
-        <p><img src="img\user.png", width=18> <a href = "login.html">Вход</a> | <a href = "registration.html">Регистрация</a> <span> </span><img src="img\search.png" , width="18"> </p>
-        <p class="site-title">Art<span>Fact<img src="img\logo.png", width=20/>ry</i></span></p>
-        <p><nav>
-        <ul>
-            <li><a href = "index.html">РАБОТИЛНИЦИ</a></li>
-            <li><a href = "voucher.html">ПОДАРИ ВАУЧЕР</a></li>
-            <li><a href = "video.html">ВИДЕО УРОЦИ</a></li>
-            <li><a href = "activity.html">УСЛУГИ</a></li>
-            <li><a href = "about.html">ЗА НАС</a></li>
-            <li><a href = "contact.html">КОНТАКТИ</a></li>
-            <li>
-                <ul>
-                    <li><a href = "#"><i class = "img/facebook"></i></a></li>
-                    <li><a href = "#"><i class = "img/instagram"></i></a></li>
-                </ul>
-            </li>
-        </ul>
-      </nav></p>
+            <th:block th:include="~{fragments/nav}"></th:block>
         </section>
     </header>
 <main>
@@ -54,10 +30,6 @@
   <p>При нас се твори с усмивка! Елате да се уверите!</p>
 </main>
 <footer>
-    <p>Copyright &copy 2020 antoanetatanasova</p>
-    <ul>
-        <li><a href="#"><i class="img/facebook"></i></a></li>
-        <li><a href="#"><i class="img/instagram"></i></a></li>
-    </ul>
+    <th:block th:include="~{fragments/footer}"></th:block>
 </footer>
         </body>
