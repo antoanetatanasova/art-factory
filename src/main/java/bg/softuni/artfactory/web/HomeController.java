@@ -22,4 +22,16 @@ public class HomeController {
         modelAndView.setViewName("index");
         return modelAndView;
     }
+
+    @GetMapping("/about")
+    public ModelAndView about(HttpSession httpSession, ModelAndView modelAndView) {
+        modelAndView.setViewName("about");
+        return modelAndView;
+    }
+
+    @GetMapping("/contact")
+    public ModelAndView contact(HttpSession httpSession, ModelAndView modelAndView) {
+        modelAndView.setViewName("contact");
+        return modelAndView;
+    }
 }

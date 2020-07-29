@@ -12,21 +12,23 @@
 <main class="two-collumns">
     <div class="centered">
         <h2>Детайли за работилница</h2>
-        <div class="centered">
-            <p><img src="/img/gift-voucher.png">
-        </div>
         <div class="container">
             <hr class="my-3"/>
-            <div class="container-fluid bg-dark w-25 m-auto ">
-                <div class="row justify-content-center ">
-                    <div th:object="${workshop}" class="card" style="width: 18rem;">
+            <div class="container-fluid">
+                <div class="row justify-content-center">
+                    <div th:object="${workshop}">
+                        <div class="col">
                         <img class="card-img-top" th:src="*{imageUrl}" alt="Card image cap">
-                        <div class="card-body bg-gray align-content-center text-center">
+                        </div>
+                        <div class="col">
+                            <div class="card-body bg-gray align-content-center text-center">
                             <h6 th:text="*{name}">Workshop name</h6>
                             <p class="card-text" th:text="*{description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi enim, excepturi ha </p>
                             <h6 th:text="*{price}">Price</h6>
                             <a th:href="@{/workshops/delete/{id}(id = *{id})}" class="btn btn-danger" >Delete</a>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
             </div>
