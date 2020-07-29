@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
+<main class="two-collumns">
+    <div class="centered">
+        <h2>Детайли за работилница</h2>
+        <div class="centered">
+            <p><img src="/img/gift-voucher.png">
+        </div>
+        <div class="container">
+            <hr class="my-3"/>
+            <div class="container-fluid bg-dark w-25 m-auto ">
+                <div class="row justify-content-center ">
+                    <div th:object="${workshop}" class="card" style="width: 18rem;">
+                        <img class="card-img-top" th:src="*{imageUrl}" alt="Card image cap">
+                        <div class="card-body bg-gray align-content-center text-center">
+                            <h6 th:text="*{name}">Workshop name</h6>
+                            <p class="card-text" th:text="*{description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi enim, excepturi ha </p>
+                            <h6 th:text="*{price}">Price</h6>
+                            <a th:href="@{/workshops/delete/{id}(id = *{id})}" class="btn btn-danger" >Delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
+</body>

@@ -102,8 +102,7 @@ a {
     letter-spacing: 2px;
   }
 
-  .
-   button {
+  .button {
     margin: 0 0 200px 100px;
     padding: 10px 15px;
     font-size: 26px;
@@ -324,6 +323,20 @@ hr {
 }
 
 .registerbtn:hover {
+  background-color: #1F9EFF;
+}
+
+.button {
+  background-color: #D63CAB;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.button:hover {
   background-color: #1F9EFF;
 }
 

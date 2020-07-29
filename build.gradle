@@ -54,6 +54,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.liquibase:liquibase-core'
 
+	compile 'org.modelmapper:modelmapper:2.3.3'
 	compileOnly "org.webjars:webjars-locator:${webjarsLocatorVersion}"
 	compileOnly "org.webjars:jquery:${jQueryVersion}"
 	compileOnly "org.webjars:popper.js:${popperJsVersion}"
