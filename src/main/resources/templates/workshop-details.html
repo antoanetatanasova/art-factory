@@ -9,20 +9,19 @@
         <th:block th:include="~{fragments/nav}"></th:block>
     </section>
 </header>
-<main class="two-collumns">
+<main class="two-columns">
     <div class="centered">
         <h2>Детайли за работилница</h2>
         <div class="container">
-            <hr class="my-3"/>
             <div class="container-fluid">
+                <div th:object="${workshop}">
                 <div class="row justify-content-center">
-                    <div th:object="${workshop}">
                         <div class="col">
-                        <img class="card-img-top" th:src="*{imageUrl}" alt="Card image cap">
+                        <img class="img-fluid" th:src="*{imageUrl}" alt="Card image cap">
                         </div>
                         <div class="col">
-                            <div class="card-body bg-gray align-content-center text-center">
-                            <h6 th:text="*{name}">Workshop name</h6>
+                            <div class="text bg-gray align-content-center text-center">
+                            <h2 th:text="*{name}">Workshop name</h2>
                             <p class="card-text" th:text="*{description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi enim, excepturi ha </p>
                             <h6 th:text="*{price}">Price</h6>
                             <a th:href="@{/workshops/delete/{id}(id = *{id})}" class="btn btn-danger" >Delete</a>
