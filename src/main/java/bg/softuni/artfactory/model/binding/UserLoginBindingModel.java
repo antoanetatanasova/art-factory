@@ -14,7 +14,7 @@ public class UserLoginBindingModel {
     }
 
     @NotNull
-    @Email(message = "Форматът на имейла е невалиден")
+    @Email(message = "Невалиден формат")
     public String getUsername() {
         return email;
     }

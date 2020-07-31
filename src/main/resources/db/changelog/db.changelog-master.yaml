@@ -5,3 +5,5 @@ databaseChangeLog:
       file: db/changelog/db.changelog-2020-07-20-roles.yaml
   - include:
       file: db/changelog/db.changelog-2020-07-26-workshops.yaml
+  - include:
+      file: db/changelog/db-changelog-2020-07-31-messages.yaml

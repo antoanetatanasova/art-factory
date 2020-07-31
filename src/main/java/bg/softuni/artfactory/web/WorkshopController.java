@@ -38,7 +38,7 @@ public class WorkshopController {
                              BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if(bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("workshopAddBindingModel", workshopAddBindingModel);
-            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.itemAddBindingModel", bindingResult);
+            redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.workshopAddBindingModel", bindingResult);
             return "redirect:add";
         }
         this.workshopService.addWorkshop(this.modelMapper
