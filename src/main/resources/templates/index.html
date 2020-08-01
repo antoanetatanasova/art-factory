@@ -27,8 +27,7 @@
             <div class="card" th:each="w : ${workshops}" th:object="${w}">
                 <img class="image-workshop" th:src="*{imageUrl}" alt="image" style="width:100%">
                 <h1 th:text="*{name}"></h1>
-                <p class="price" th:text="*{price}">19.99 лв.</p>
-                <p th:text="*{startsOn}"></p>
+                <p class="price" th:text="|*{price} лв.|">19.99 лв.</p>
                 <p><a th:href="@{/workshops/details/(id = *{id})}" class="registerbtn">ПОВЕЧЕ</a></p>
             </div>
         </div>

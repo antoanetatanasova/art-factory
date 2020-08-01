@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: add-video-table
+      author: Antoaneta Atanasova
+      changes:
+        - createTable:
+            tableName: video
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: thumbnail
+                  type: varchar(2000)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: youtube_url
+                  type: varchar(2000)
+                  constraints:
+                    nullable: false

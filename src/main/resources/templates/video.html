@@ -11,11 +11,19 @@
 </header>
 <main>
     <h2>Видео уроци</h2>
-    <ul>
-        <li>
-            ВИДЕО
-        </li>
-    </ul>
+    <div class="container">
+        <h2>Borderless Table</h2>
+        <p>The .table-borderless class removes borders from the table:</p>
+        <table class="table table-borderless">
+            <tbody>
+            <tr>
+                <th>Thumbnail</th>
+                <th>Title</th>
+                <th><a th:href="@{/workshops/details/(id = *{id})}" class="registerbtn">КЪМ УРОКА</a></th>
+            </tr>
+            </tbody>
+        </table>
+    </div>
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>

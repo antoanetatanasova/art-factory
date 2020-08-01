@@ -27,8 +27,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
             http.
                     authorizeRequests().
                     requestMatchers(PathRequest.toStaticResources().atCommonLocations()).permitAll().
-                    antMatchers("/", "/login**", "/register**").permitAll().
-                    antMatchers("/video**").
+                    antMatchers("/", "/login**", "/register**, /video**").permitAll().
+                    antMatchers("/administration").
                     authenticated().
                     and().
                     formLogin().

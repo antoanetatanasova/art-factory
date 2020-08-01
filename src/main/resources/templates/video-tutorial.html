@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
+<main>
+    <h2>Видео урок</h2>
+    <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/UdCCmhq_Xco"
+            frameborder="0" llow="accelerometer; autoplay; encrypted-media; gyroscope;
+        picture-in-picture" allowfullscreen></iframe>
+</main>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
+</body>
+</html>

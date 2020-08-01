@@ -365,6 +365,14 @@ a {
     min-width: 100px;
 }
 
+/* Error page */
+.wrong-address {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 footer {
     background: #D63CAB;
 }
