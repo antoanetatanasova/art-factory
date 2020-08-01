@@ -4,35 +4,36 @@
     <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
-    <header>
-        <section class="navigation">
-            <th:block th:include="~{fragments/nav}"></th:block>
-        </section>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
 </header>
 <main>
-  <form action="/action_page.php">
-    <div class="container">
-      <h2>Регистриране на нов потребител</h2>
-      <p>Попълнете формата, за да създадете нов профил, или <a href="#">ВХОД</a>, ако вече имате регистрация.</p>
-      <hr>
+    <form action="/action_page.php">
+        <div class="container">
+            <h2>Регистриране на нов потребител</h2>
+            <p>Попълнете формата, за да създадете нов профил, или <a href="#">ВХОД</a>, ако вече имате регистрация.</p>
+            <hr>
 
-      <label for="email"><b></b></label>
-      <input type="text" placeholder="Email" name="email" id="email" required>
+            <label for="email"><b></b></label>
+            <input type="text" placeholder="Email" name="email" id="email" required>
 
-      <label for="psw"><b></b></label>
-      <input type="password" placeholder="Парола" name="psw" id="psw" required>
+            <label for="psw"><b></b></label>
+            <input type="password" placeholder="Парола" name="psw" id="psw" required>
 
-      <label for="psw-repeat"><b></b></label>
-      <input type="password" placeholder="Потвърдете паролата" name="psw-repeat" id="psw-repeat" required>
-      <hr>
-      <p>Създавайки профил, Вие се съгласявате с нашите<a href="#">Условия за ползване на сайта и Политика на поверителност на данните</a>.</p>
+            <label for="psw-repeat"><b></b></label>
+            <input type="password" placeholder="Потвърдете паролата" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+            <p>Създавайки профил, Вие се съгласявате с нашите<a href="#">Условия за ползване на сайта и Политика на
+                поверителност на данните</a>.</p>
 
-      <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
-    </div>
+            <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
+        </div>
 
-  </form>
+    </form>
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>
 </footer>
-        </body>
+</body>

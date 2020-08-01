@@ -4,11 +4,11 @@
     <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
-    <header>
-        <section class="navigation">
-            <th:block th:include="~{fragments/nav}"></th:block>
-        </section>
-    </header>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
 <main>
     <h2 class="text-center">Създаване на нова работилница</h2>
     <hr class="hr-3"/>
@@ -18,50 +18,60 @@
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="name" class="h5 mb-2">Име</label>
             </div>
-            <input th:field="*{name}" th:errorclass="bg-danger" type="text" class="form-control" id="name" name="name" />
+            <input th:field="*{name}" th:errorclass="bg-danger" type="text" class="form-control" id="name" name="name"/>
             <small th:each="e : ${#fields.errors('name')}" th:text="${e}" class="text-danger">Incorrect name!</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="description" class="h5 mb-2">Описание</label>
             </div>
-            <input th:field="*{description}" th:errorclass="bg-danger" type="text" class="form-control" id="description" name="description"/>
-            <small th:each="e : ${#fields.errors('description')}" th:text="${e}" class="text-danger">Incorrect description</small>
+            <input th:field="*{description}" th:errorclass="bg-danger" type="text" class="form-control" id="description"
+                   name="description"/>
+            <small th:each="e : ${#fields.errors('description')}" th:text="${e}" class="text-danger">Incorrect
+                description</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="imageUrl" class="h5 mb-2">URL на изображение</label>
             </div>
-            <input th:field="*{imageUrl}" th:errorclass="bg-danger" type="text" class="form-control" id="imageUrl" name="imageUrl"/>
+            <input th:field="*{imageUrl}" th:errorclass="bg-danger" type="text" class="form-control" id="imageUrl"
+                   name="imageUrl"/>
             <small th:each="e : ${#fields.errors('imageUrl')}" th:text="${e}" class="text-danger">Incorrect url</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="price" class="h5 mb-2">Цена</label>
             </div>
-            <input th:field="*{price}" th:errorclass="bg-danger" type="number" class="form-control" id="price" name="price"/>
+            <input th:field="*{price}" th:errorclass="bg-danger" type="number" class="form-control" id="price"
+                   name="price"/>
             <small th:each="e : ${#fields.errors('price')}" th:text="${e}" class="text-danger">Incorrect price!</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="startsOn" class="h5 mb-2">Начало</label>
             </div>
-            <input th:field="*{startsOn}" th:errorclass="bg-danger" type="datetime-local" class="form-control" id="startsOn" name="startsOn"/>
-            <small th:each="e : ${#fields.errors('startsOn')}" th:text="${e}" class="text-danger">Incorrect description</small>
+            <input th:field="*{startsOn}" th:errorclass="bg-danger" type="datetime-local" class="form-control"
+                   id="startsOn" name="startsOn"/>
+            <small th:each="e : ${#fields.errors('startsOn')}" th:text="${e}" class="text-danger">Incorrect
+                description</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="endsOn" class="h5 mb-2">Край</label>
             </div>
-            <input th:field="*{endsOn}" th:errorclass="bg-danger" type="datetime-local" class="form-control" id="endsOn" name="endsOn"/>
-            <small th:each="e : ${#fields.errors('endsOn')}" th:text="${e}" class="text-danger">Incorrect description</small>
+            <input th:field="*{endsOn}" th:errorclass="bg-danger" type="datetime-local" class="form-control" id="endsOn"
+                   name="endsOn"/>
+            <small th:each="e : ${#fields.errors('endsOn')}" th:text="${e}" class="text-danger">Incorrect
+                description</small>
         </div>
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="maxPlaces" class="h5 mb-2">Свободни места</label>
             </div>
-            <input th:field="*{maxPlaces}" th:errorclass="bg-danger" type="number" class="form-control" id="maxPlaces" name="maxPlaces"/>
-            <small th:each="e : ${#fields.errors('maxPlaces')}" th:text="${e}" class="text-danger">Incorrect price!</small>
+            <input th:field="*{maxPlaces}" th:errorclass="bg-danger" type="number" class="form-control" id="maxPlaces"
+                   name="maxPlaces"/>
+            <small th:each="e : ${#fields.errors('maxPlaces')}" th:text="${e}" class="text-danger">Incorrect
+                price!</small>
         </div>
         <div class="button-holder d-flex justify-content-center">
             <button type="submit" class="registerbtn">СЪЗДАВАНЕ</button>

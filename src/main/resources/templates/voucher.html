@@ -4,14 +4,14 @@
     <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
-    <header>
-        <section class="navigation">
-            <th:block th:include="~{fragments/nav}"></th:block>
-        </section>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
 </header>
 <main class="two-collumns">
-  <div class="centered">
-    <h2>Подарете ваучер</h2>
+    <div class="centered">
+        <h2>Подарете ваучер</h2>
         <div class="container">
             <form action="/action_page.php">
                 <label for="sender"></label>
@@ -33,20 +33,21 @@
                 <input type="text" id="subject" name="amount" placeholder="Въведете избрана сума">
 
                 <label for="details"></label>
-                <textarea id="details" name="message" placeholder="Допълнителни пояснения" style="height:200px"></textarea>
+                <textarea id="details" name="message" placeholder="Допълнителни пояснения"
+                          style="height:200px"></textarea>
 
 
                 <input type="submit" value="ИЗПРАЩАНЕ">
             </form>
         </div>
-      </div>
+    </div>
 
-<div class="centered">
-  <p><img src="../../../../../../../_art-factory-web-project/img/gift-voucher.png">
-</div>
+    <div class="centered">
+        <p><img src="../../../../../../../_art-factory-web-project/img/gift-voucher.png">
+    </div>
 
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>
 </footer>
-        </body>
+</body>

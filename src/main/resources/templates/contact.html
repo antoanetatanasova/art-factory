@@ -4,52 +4,64 @@
     <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
-    <header>
-        <section class="navigation">
-            <th:block th:include="~{fragments/nav}"></th:block>
-        </section>
-    </header>
-    <main class="two-collumns">
-        <div class="centered">
-            <h2>Пишете ни:</h2>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
+<main class="two-collumns">
+    <div class="centered">
+        <h2>Пишете ни:</h2>
 
-            <div class="container">
-                <form th:action="@{/contact}" th:method="POST" th:object="${messageSendBindingModel}">
-                    <div class="form-group">
+        <div class="container">
+            <form th:action="@{/contact}" th:method="POST" th:object="${messageSendBindingModel}">
+                <div class="form-group">
                     <label for="sender"></label>
-                        <input th:field="*{sender}" th:errorclass="bg-danger" type="text" class="form-control" id="sender" name="sender" placeholder="Име*"/>
-                        <small th:each="e : ${#fields.errors('sender')}" th:text="${e}" class="text-danger">Error message!</small>
-                    </div>
-                    <div class="form-group">
+                    <input th:field="*{sender}" th:errorclass="bg-danger" type="text" class="form-control" id="sender"
+                           name="sender" placeholder="Име*"/>
+                    <small th:each="e : ${#fields.errors('sender')}" th:text="${e}" class="text-danger">Error
+                        message!</small>
+                </div>
+                <div class="form-group">
                     <label for="email"></label>
-                        <input th:field="*{email}" th:errorclass="bg-danger" type="text" class="form-control" id="email" name="email" placeholder="Email*"/>
-                        <small th:each="e : ${#fields.errors('email')}" th:text="${e}" class="text-danger">Error message!</small>
-                    </div>
-                    <div class="form-group">
+                    <input th:field="*{email}" th:errorclass="bg-danger" type="text" class="form-control" id="email"
+                           name="email" placeholder="Email*"/>
+                    <small th:each="e : ${#fields.errors('email')}" th:text="${e}" class="text-danger">Error
+                        message!</small>
+                </div>
+                <div class="form-group">
                     <label for="subject"></label>
-                        <input th:field="*{subject}" th:errorclass="bg-danger" type="text" class="form-control" id="subject" name="subject" placeholder="Относно*"/>
-                        <small th:each="e : ${#fields.errors('subject')}" th:text="${e}" class="text-danger">Error message!</small>
-                    </div>
-                    <div class="form-group">
+                    <input th:field="*{subject}" th:errorclass="bg-danger" type="text" class="form-control" id="subject"
+                           name="subject" placeholder="Относно*"/>
+                    <small th:each="e : ${#fields.errors('subject')}" th:text="${e}" class="text-danger">Error
+                        message!</small>
+                </div>
+                <div class="form-group">
                     <label for="body"></label>
-                        <textarea th:field="*{body}" th:errorclass="bg-danger" type="text" class="form-control" id="body" name="body" placeholder="Съобщение*" style="height:200px"></textarea>
-                        <small th:each="e : ${#fields.errors('body')}" th:text="${e}" class="text-danger">Error message!</small>
-                    </div>
-                    <input type="submit" value="ИЗПРАЩАНЕ">
-                </form>
-            </div>
+                    <textarea th:field="*{body}" th:errorclass="bg-danger" type="text" class="form-control" id="body"
+                              name="body" placeholder="Съобщение*" style="height:200px"></textarea>
+                    <small th:each="e : ${#fields.errors('body')}" th:text="${e}" class="text-danger">Error
+                        message!</small>
+                </div>
+                <input type="submit" value="ИЗПРАЩАНЕ">
+            </form>
         </div>
+    </div>
 
 
-        <div class="centered">
-            <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087127/art-factory/icons/smartphone_oklqkp.png", width=18> 088 750 3559 </p>
-            <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087106/art-factory/icons/map_x5vske.png", width=18> София, ул. Средна гора №55, партер </p>
-            <iframe width="600" height="500" frameborder="0" scrolling="no" src="https://www.bgmaps.com/link/map/3C6D4796357C27F6BD5B8101901C9383"></iframe>
-        </div>
+    <div class="centered">
+        <p>
+            <img src="https://res.cloudinary.com/the-potential/image/upload/v1595087127/art-factory/icons/smartphone_oklqkp.png"
+                 , width=18> 088 750 3559 </p>
+        <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087106/art-factory/icons/map_x5vske.png"
+                , width=18> София, ул. Средна гора №55, партер </p>
+        <iframe width="600" height="500" frameborder="0" scrolling="no"
+                src="https://www.bgmaps.com/link/map/3C6D4796357C27F6BD5B8101901C9383"></iframe>
+    </div>
 
-    </main>
-    <footer>
-        <th:block th:include="~{fragments/footer}"></th:block>
-    </footer>
+</main>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
 </body>
 </html>

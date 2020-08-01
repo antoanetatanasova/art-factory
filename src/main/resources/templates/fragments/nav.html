@@ -1,21 +1,25 @@
 <th:block xmlns:th="https://www.thymeleaf.org/">
-    <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087134/art-factory/icons/user_v2pjm5.png", width=18> <a href = "login.html" data-toggle="modal" data-target="#loginModal">Вход</a> | <a href = "registration.html" data-toggle="modal" data-target="#registerModal">Регистрация</a> </p>
+    <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087134/art-factory/icons/user_v2pjm5.png" ,
+            width=18> <a href="login.html" data-toggle="modal" data-target="#loginModal">Вход</a> | <a
+            href="registration.html" data-toggle="modal" data-target="#registerModal">Регистрация</a></p>
     <th:block th:include="~{fragments/login-modal}"></th:block>
     <th:block th:include="~{fragments/registration-modal}"></th:block>
 
-        <p class="site-title justify-content-center">Art<span>Factory</span></p>
-        <p><nav>
+    <p class="site-title justify-content-center">Art<span>Factory</span></p>
+    <p>
+        <nav>
             <div class="container-fluid">
                 <ul class="nav nav-tabs justify-content-center">
-                    <li class="nav-item"><a href = "/">НАЧАЛО</a></li>
-                    <li class="nav-item"><a href = "/calendar">ПРОГРАМА</a></li>
-                    <li class="nav-item dropdown"><a href = "/voucher">ВАУЧЕРИ</a></li>
-                    <li class="nav-item"><a href = "/video">ВИДЕО УРОЦИ</a></li>
-                    <li class="nav-item"><a href = "/activity">УСЛУГИ</a></li>
-                    <li class="nav-item"><a href = "/about">ЗА НАС</a></li>
-                    <li class="nav-item"><a href = "/contact">КОНТАКТИ</a></li>
-                    <li class="nav-item"><a href = "/administration">АДМИНИСТРАЦИЯ</a></li>
+                    <li class="nav-item"><a href="/">НАЧАЛО</a></li>
+                    <li class="nav-item"><a href="/calendar">ПРОГРАМА</a></li>
+                    <li class="nav-item dropdown"><a href="/voucher">ВАУЧЕРИ</a></li>
+                    <li class="nav-item"><a href="/video">ВИДЕО УРОЦИ</a></li>
+                    <li class="nav-item"><a href="/activity">УСЛУГИ</a></li>
+                    <li class="nav-item"><a href="/about">ЗА НАС</a></li>
+                    <li class="nav-item"><a href="/contact">КОНТАКТИ</a></li>
+                    <li class="nav-item"><a href="/administration">АДМИНИСТРАЦИЯ</a></li>
                 </ul>
             </div>
-        </nav></p>
+        </nav>
+    </p>
 </th:block>

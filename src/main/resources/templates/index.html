@@ -4,38 +4,39 @@
     <th:block th:include="~{fragments/head}"></th:block>
 </head>
 <body>
-    <header>
-        <section class="navigation">
-            <th:block th:include="~{fragments/nav}"></th:block>
-        </section>
-        <section class="carousel">
-            <th:block th:include="~{fragments/carousel}"></th:block>
-        </section>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+    <section class="carousel">
+        <th:block th:include="~{fragments/carousel}"></th:block>
+    </section>
     </div>
 </header>
 <main>
-  <div class="container">
-    <section class="welcome justify-content-center">
-        <h2>Добре дошли в Art Factory!</h2>
-        <p>Art Factory е място за изкуство и провокации.</p>
-        <p>При нас ще намерите ръчно творчество за деца и възрастни.</p>
-    </section>
+    <div class="jumbotron jumbotron-fluid justify-content-center">
+        <section class="welcome justify-content-center">
+            <h2>Добре дошли в Art Factory!</h2>
+            <p>Art Factory е място за изкуство и провокации.</p>
+            <p>При нас ще намерите ръчно творчество за деца и възрастни.</p>
+        </section>
+    </div>
     <section class="classes">
         <h2>Предстоящи работилници</h2>
-          <div class="container-fluid">
-      <div class="card" th:each="w : ${workshops}" th:object="${w}">
-        <img class="image-workshop" th:src="*{imageUrl}" alt="image" style="width:100%">
-        <h1 th:text="*{name}"></h1>
-        <p class="price" th:text="*{price}">19.99 лв.</p>
-        <p th:text="*{startsOn}"></p>
-        <p><a th:href="@{/workshops/details/(id = *{id})}" class="registerbtn">ПОВЕЧЕ</a></p>
-      </div>
-          </div>
-</section>
-</div>
+        <div class="container-fluid">
+            <div class="card" th:each="w : ${workshops}" th:object="${w}">
+                <img class="image-workshop" th:src="*{imageUrl}" alt="image" style="width:100%">
+                <h1 th:text="*{name}"></h1>
+                <p class="price" th:text="*{price}">19.99 лв.</p>
+                <p th:text="*{startsOn}"></p>
+                <p><a th:href="@{/workshops/details/(id = *{id})}" class="registerbtn">ПОВЕЧЕ</a></p>
+            </div>
+        </div>
+    </section>
+    </div>
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>
 </footer>
-        </body>
+</body>
 </html>
