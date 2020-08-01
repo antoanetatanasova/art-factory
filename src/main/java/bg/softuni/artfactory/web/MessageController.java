@@ -1,9 +1,7 @@
 package bg.softuni.artfactory.web;
 
 import bg.softuni.artfactory.model.binding.MessageSendBindingModel;
-import bg.softuni.artfactory.model.binding.WorkshopAddBindingModel;
 import bg.softuni.artfactory.model.service.MessageServiceModel;
-import bg.softuni.artfactory.model.service.WorkshopServiceModel;
 import bg.softuni.artfactory.service.MessageService;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Controller;
@@ -29,24 +27,24 @@ public class MessageController {
         this.modelMapper = modelMapper;
     }
 
-    @GetMapping("/")
+    @GetMapping()
     public String add(Model model) {
         if(!model.containsAttribute("messageSendBindingModel")) {
             model.addAttribute("messageSendBindingModel", new MessageSendBindingModel());
         }
-        return "workshop-add";
+        return "contact";
     }
 
-    @PostMapping("/")
+    @PostMapping()
     public String addConfirm(@Valid @ModelAttribute("messageSendBindingModel")MessageSendBindingModel messageSendBindingModel,
                              BindingResult bindingResult, RedirectAttributes redirectAttributes) {
         if(bindingResult.hasErrors()) {
             redirectAttributes.addFlashAttribute("messageSendBindingModel", messageSendBindingModel);
             redirectAttributes.addFlashAttribute("org.springframework.validation.BindingResult.messageSendBindingModel", bindingResult);
-            return "redirect:/";
+            return "redirect:/contact";
         }
         this.messageService.addMessage(this.modelMapper
                 .map(messageSendBindingModel, MessageServiceModel.class));
-        return "redirect:/";
+        return "redirect:/contact";
     }
 }

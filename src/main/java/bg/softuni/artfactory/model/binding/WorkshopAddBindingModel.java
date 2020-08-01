@@ -10,26 +10,28 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import static bg.softuni.artfactory.constant.Constants.*;
+
 public class WorkshopAddBindingModel {
 
-    @NotNull
-    @Length(min = 3, message = "Името трябва да пъде по-дълго от {min} символа")
+    @NotNull(message = MANDATORY_FIELD)
+    @Length(min = 3, message = MIN_LENGTH)
     private String name;
     private String description;
-    @NotNull
-    @URL(message = "Въведеният адрес е невалиден.")
+    @NotNull(message = MANDATORY_FIELD)
+    @URL(message = INVALID_URL)
     private String imageUrl;
-    @NotNull
-    @DecimalMin(value = "0", message = "Цената трябва да бъде положително число.")
+    @NotNull(message = MANDATORY_FIELD)
+    @DecimalMin(value = "0", message = INVALID_NUMBER)
     private BigDecimal price;
-    @NotNull
-    @FutureOrPresent(message = "Невалидни дата и/или час.")
+    @NotNull(message = MANDATORY_FIELD)
+    @FutureOrPresent(message = INVALID_DATE_TIME)
     private LocalDateTime startsOn;
-    @NotNull
-    @FutureOrPresent(message = "Невалидни дата и/или час.")
+    @NotNull(message = MANDATORY_FIELD)
+    @FutureOrPresent(message = INVALID_DATE_TIME)
     private LocalDateTime endsOn;
-    @NotNull
-    @Min(value = 1, message = "Обявете поне {value} място.")
+    @NotNull(message = MANDATORY_FIELD)
+    @Min(value = 1, message = INVALID_NUMBER)
     private int maxPlaces;
 
     public WorkshopAddBindingModel() {

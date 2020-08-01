@@ -5,19 +5,21 @@ import org.hibernate.validator.constraints.Length;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
+import static bg.softuni.artfactory.constant.Constants.*;
+
 public class MessageSendBindingModel {
 
-    @NotNull
-    @Length(min = 2, message = "Въведете поне {min} символа.")
+    @NotNull(message = MANDATORY_FIELD)
+    @Length(min = 2, message = MIN_LENGTH)
     private String sender;
-    @NotNull
-    @Email(message = "Невалиден формат.")
+    @NotNull(message = MANDATORY_FIELD)
+    @Email(message = INVALID_FORMAT)
     private String email;
-    @NotNull
-    @Length(min = 3, message = "Въведете поне {min} символа.")
+    @NotNull(message = MANDATORY_FIELD)
+    @Length(min = 3, message = MIN_LENGTH)
     private String subject;
-    @NotNull
-    @Length(min = 10, message = "Въведете поне {min} символа.")
+    @NotNull(message = MANDATORY_FIELD)
+    @Length(min = 10, message = MIN_LENGTH)
     private String body;
 
     public MessageSendBindingModel() {

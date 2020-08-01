@@ -29,9 +29,4 @@ public class HomeController {
         return modelAndView;
     }
 
-    @GetMapping("/contact")
-    public ModelAndView contact(HttpSession httpSession, ModelAndView modelAndView) {
-        modelAndView.setViewName("contact");
-        return modelAndView;
-    }
 }
