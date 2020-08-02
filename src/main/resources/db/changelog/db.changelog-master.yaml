@@ -9,3 +9,5 @@ databaseChangeLog:
       file: db/changelog/db.changelog-2020-07-31-messages.yaml
   - include:
       file: db/changelog/db.changelog-2020-08-01-video.yaml
+  - include:
+      file: db/changelog/db.changelog-2020-08-02-activity.yaml

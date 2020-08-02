@@ -1,6 +1,6 @@
 package bg.softuni.artfactory.model.service;
 
-public class VideoServiceModel {
+public class VideoServiceModel extends BaseServiceModel {
 
     private String thumbnail;
     private String title;

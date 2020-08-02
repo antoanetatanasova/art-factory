@@ -10,35 +10,43 @@
     </section>
 </header>
 <main>
-    <body>
     <h2>Нашите услуги</h2>
 
     <p>Ние от Art Factory предлагаме богато портфолио от творчески услуги. Научете повече от съдържанието по-долу и се
         свържете с нас за повече информация и индивидуална оферта. Следете ни за нови предложения.</p>
-    <button class="collapsible">Работилници</button>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-    </div>
-    <button class="collapsible">Арт събития</button>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-    </div>
-    <button class="collapsible">Тиймбилдинг</button>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-    </div>
-    <button class="collapsible">Фотография</button>
-    <div class="content">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-            ea commodo consequat.</p>
-    </div>
+    <section class="activities" th:each="a : ${activity}" th:object="${a}">
+        <button class="collapsible" th:text="*{name}">Lorem...</button>
+        <div class="content">
+            <p th:text="*{description}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat.</p>
+        </div>
+    </section>
+
+<!--    <button class="collapsible">Работилници</button>-->
+<!--    <div class="content">-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
+<!--            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
+<!--            ea commodo consequat.</p>-->
+<!--    </div>-->
+<!--    <button class="collapsible">Арт събития</button>-->
+<!--    <div class="content">-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
+<!--            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
+<!--            ea commodo consequat.</p>-->
+<!--    </div>-->
+<!--    <button class="collapsible">Тиймбилдинг</button>-->
+<!--    <div class="content">-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
+<!--            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
+<!--            ea commodo consequat.</p>-->
+<!--    </div>-->
+<!--    <button class="collapsible">Фотография</button>-->
+<!--    <div class="content">-->
+<!--        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et-->
+<!--            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
+<!--            ea commodo consequat.</p>-->
+<!--    </div>-->
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
@@ -55,7 +63,10 @@
             });
         }
     </script>
-    </body>
+    <p></p>
+    <img src="https://res.cloudinary.com/the-potential/image/upload/v1596376786/art-factory/main/pexels-lumn-316465_lmvaiw.jpg"
+         style="width: 100%">
+    <p></p>
 </main>
 </body>
 

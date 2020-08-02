@@ -3,7 +3,7 @@ package bg.softuni.artfactory.model.service;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class WorkshopServiceModel {
+public class WorkshopServiceModel extends BaseServiceModel{
 
     private String name;
     private String description;

@@ -1,7 +1,7 @@
 package bg.softuni.artfactory.model.service;
 
 
-public class MessageServiceModel {
+public class MessageServiceModel extends BaseServiceModel {
 
     private String sender;
     private String email;
