@@ -1,28 +1,24 @@
-package bg.softuni.artfactory.model.entity;
+package bg.softuni.artfactory.model.binding;
 
+import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
-@Entity
-@Table(name = "video")
-public class Video extends BaseEntity {
+import static bg.softuni.artfactory.constant.Constants.*;
 
-    @Column(name = "thumbnail")
-    @NotNull
-    @URL
+public class VideoAddBindingModel {
+
+    @NotNull(message = MANDATORY_FIELD)
+    @URL(message = INVALID_URL)
     private String thumbnail;
-    @Column(name = "title")
-    @NotNull
+    @NotNull(message = MANDATORY_FIELD)
+    @Length(min = 3, message = MIN_LENGTH)
     private String title;
-    @Column(name = "youtube_stamp")
-    @NotNull
+    @NotNull(message = MANDATORY_FIELD)
     private String youtubeStamp;
 
-    public Video() {
+    public VideoAddBindingModel() {
     }
 
     public String getThumbnail() {
@@ -45,8 +41,8 @@ public class Video extends BaseEntity {
         return youtubeStamp;
     }
 
-    public void setYoutubeStamp(String youtubeId) {
-        this.youtubeStamp = youtubeId;
+    public void setYoutubeStamp(String youtubeStamp) {
+        this.youtubeStamp = youtubeStamp;
     }
 
 }

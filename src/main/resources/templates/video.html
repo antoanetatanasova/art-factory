@@ -10,16 +10,22 @@
     </section>
 </header>
 <main>
+
     <h2>Видео уроци</h2>
-    <div class="container">
-        <h2>Borderless Table</h2>
-        <p>The .table-borderless class removes borders from the table:</p>
-        <table class="table table-borderless">
+    <p>
+    <div class="text bg-warning justify-content-center"><img
+            src="https://res.cloudinary.com/the-potential/image/upload/v1596288668/art-factory/icons/warning_jvswhm.png"
+            width="50px">Съдържанието на видео уроците е безплатно, но е достъпно само за регистрирани потребители.
+        Изберете ВХОД или РЕГИСТРАЦИЯ.
+    </div>
+    </p>
+    <div class="container-fluid">
+        <table class="table table-borderless" th:each="v : ${video}" th:object="${v}">
             <tbody>
             <tr>
-                <th>Thumbnail</th>
-                <th>Title</th>
-                <th><a th:href="@{/workshops/details/(id = *{id})}" class="registerbtn">КЪМ УРОКА</a></th>
+                <th><img class="thumbnail" th:src="*{thumbnail}" alt="image" width="100px"></th>
+                <th th:text="*{title}">Title</th>
+                <th><a th:href="@{/video/tutorial/(id = *{id})}" class="registerbtn">КЪМ УРОКА</a></th>
             </tr>
             </tbody>
         </table>

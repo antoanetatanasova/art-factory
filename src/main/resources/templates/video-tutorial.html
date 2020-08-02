@@ -10,11 +10,12 @@
     </section>
 </header>
 <main>
-    <h2>Видео урок</h2>
-    <iframe width="560" height="315"
-            src="https://www.youtube.com/embed/UdCCmhq_Xco"
-            frameborder="0" llow="accelerometer; autoplay; encrypted-media; gyroscope;
+    <div class="tutorial" th:object="${video}">
+        <h2 th:text="*{title}">Видео урок</h2>
+        <iframe width="560" height="315" th:src="@{https://www.youtube.com/embed/{yid}(yid=*{youtubeStamp})}"
+        frameborder="0" llow="accelerometer; autoplay; encrypted-media; gyroscope;
         picture-in-picture" allowfullscreen></iframe>
+    </div>
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>

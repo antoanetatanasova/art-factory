@@ -24,7 +24,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: youtube_url
-                  type: varchar(2000)
+                  name: youtube_stamp
+                  type: varchar(255)
                   constraints:
                     nullable: false

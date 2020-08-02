@@ -10,7 +10,37 @@
     </section>
 </header>
 <main>
-
+    <h2 class="text-center">Създаване на нов видео урок</h2>
+    <hr class="hr-3"/>
+    <form class="mx-auto w-25 p-2 rounded text-center"
+          th:action="@{/video/add}" th:method="POST" th:object="${videoAddBindingModel}">
+        <div class="form-group">
+            <div class="text-dark label-holder d-flex justify-content-center">
+                <label for="thumbnail" class="h5 mb-2">Thumbnail</label>
+            </div>
+            <input th:field="*{thumbnail}" th:errorclass="bg-danger" type="text" class="form-control" id="thumbnail" name="thumbnail"/>
+            <small th:each="e : ${#fields.errors('thumbnail')}" th:text="${e}" class="text-danger">Error message!</small>
+        </div>
+        <div class="form-group">
+            <div class="text-dark label-holder d-flex justify-content-center">
+                <label for="title" class="h5 mb-2">Име</label>
+            </div>
+            <input th:field="*{title}" th:errorclass="bg-danger" type="text" class="form-control" id="title"
+                   name="title"/>
+            <small th:each="e : ${#fields.errors('title')}" th:text="${e}" class="text-danger">Error message!</small>
+        </div>
+        <div class="form-group">
+            <div class="text-dark label-holder d-flex justify-content-center">
+                <label for="youtubeStamp" class="h5 mb-2">Youtube Stamp</label>
+            </div>
+            <input th:field="*{youtubeStamp}" th:errorclass="bg-danger" type="text" class="form-control" id="youtubeStamp"
+                   name="youtubeId"/>
+            <small th:each="e : ${#fields.errors('youtubeStamp')}" th:text="${e}" class="text-danger">Еrror message!</small>
+        </div>
+        <div class="button-holder d-flex justify-content-center">
+            <button type="submit" class="registerbtn">СЪЗДАВАНЕ</button>
+        </div>
+    </form>
 </main>
 <footer>
     <th:block th:include="~{fragments/footer}"></th:block>
