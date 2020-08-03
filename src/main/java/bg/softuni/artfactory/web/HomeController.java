@@ -23,10 +23,4 @@ public class HomeController {
         return modelAndView;
     }
 
-    @GetMapping("/about")
-    public ModelAndView about(HttpSession httpSession, ModelAndView modelAndView) {
-        modelAndView.setViewName("about");
-        return modelAndView;
-    }
-
 }
