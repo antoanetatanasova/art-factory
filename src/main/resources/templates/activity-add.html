@@ -9,7 +9,6 @@
 </nav>
 <main>
     <h2 class="text-center">Създаване на услуга</h2>
-    <hr class="hr-3"/>
     <form class="mx-auto w-25 p-2 rounded text-center"
           th:action="@{/activity/add}" th:method="POST" th:object="${activityAddBindingModel}">
         <div class="form-group">
@@ -29,6 +28,7 @@
             <small th:each="e : ${#fields.errors('description')}" th:text="${e}" class="text-danger">Error
                 message!</small>
         </div>
+        <hr class="hr-3"/>
         <div class="button-holder d-flex justify-content-center">
             <button type="submit" class="registerbtn">СЪЗДАВАНЕ</button>
         </div>

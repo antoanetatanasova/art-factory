@@ -11,7 +11,6 @@
 </header>
 <main>
     <h2 class="text-center">Създаване на нова работилница</h2>
-    <hr class="hr-3"/>
     <form class="mx-auto w-25 p-2 rounded text-center"
           th:action="@{/workshops/add}" th:method="POST" th:object="${workshopAddBindingModel}">
         <div class="form-group">
@@ -73,6 +72,7 @@
             <small th:each="e : ${#fields.errors('maxPlaces')}" th:text="${e}" class="text-danger">Incorrect
                 price!</small>
         </div>
+        <hr class="hr-3"/>
         <div class="button-holder d-flex justify-content-center">
             <button type="submit" class="registerbtn">СЪЗДАВАНЕ</button>
         </div>

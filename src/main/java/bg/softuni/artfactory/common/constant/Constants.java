@@ -1,4 +1,4 @@
-package bg.softuni.artfactory.constant;
+package bg.softuni.artfactory.common.constant;
 
 public class Constants {
 

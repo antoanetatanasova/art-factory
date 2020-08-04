@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-import static bg.softuni.artfactory.constant.Constants.*;
+import static bg.softuni.artfactory.common.constant.Constants.*;
 
 public class WorkshopAddBindingModel {
 

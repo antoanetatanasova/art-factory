@@ -5,7 +5,7 @@ import org.hibernate.validator.constraints.URL;
 
 import javax.validation.constraints.NotNull;
 
-import static bg.softuni.artfactory.constant.Constants.*;
+import static bg.softuni.artfactory.common.constant.Constants.*;
 
 public class VideoAddBindingModel {
 

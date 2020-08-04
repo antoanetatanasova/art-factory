@@ -1,7 +1,8 @@
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <th:block xmlns:th="https://www.thymeleaf.org/">
     <p><img src="https://res.cloudinary.com/the-potential/image/upload/v1595087134/art-factory/icons/user_v2pjm5.png" ,
-            width=18> <a href="login.html" data-toggle="modal" data-target="#loginModal">Вход</a> | <a
-            href="registration.html" data-toggle="modal" data-target="#registerModal">Регистрация</a></p>
+            width=18> <a href="/login">Вход</a> | <a
+            href="/registration">Регистрация</a></p>
     <th:block th:include="~{fragments/login-modal}"></th:block>
     <th:block th:include="~{fragments/registration-modal}"></th:block>
 
@@ -17,7 +18,9 @@
                     <li class="nav-item"><a href="/activity">УСЛУГИ</a></li>
                     <li class="nav-item"><a href="/about">ЗА НАС</a></li>
                     <li class="nav-item"><a href="/contact">КОНТАКТИ</a></li>
-                    <li class="nav-item"><a href="/administration">АДМИНИСТРАЦИЯ</a></li>
+                    <div sec:authorize="hasRole('ROLE_ADMIN')">
+                        <li class="nav-item"><a href="/administration">АДМИНИСТРАЦИЯ</a></li>
+                    </div>
                 </ul>
             </div>
         </nav>

@@ -1,8 +1,5 @@
 package bg.softuni.artfactory.model.entity;
 
-import bg.softuni.artfactory.model.entity.BaseEntity;
-import bg.softuni.artfactory.model.entity.Role;
-
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.CascadeType;
@@ -16,7 +13,7 @@ import javax.validation.constraints.NotNull;
 
 @Entity
 @Table(name="users")
-public class User extends BaseEntity {
+public class UserEntity extends BaseEntity {
 
     @NotNull
     @Column(name="email", nullable = false, unique = true)
@@ -31,9 +28,9 @@ public class User extends BaseEntity {
             fetch = FetchType.EAGER
     )
     @JoinColumn(name="user_id")
-    private List<Role> roles = new ArrayList<>();
+    private List<RoleEntity> roles = new ArrayList<>();
 
-    public User() {
+    public UserEntity() {
     }
 
     public String getEmail() {
@@ -52,11 +49,11 @@ public class User extends BaseEntity {
         this.passwordHash = passwordHash;
     }
 
-    public List<Role> getRoles() {
+    public List<RoleEntity> getRoles() {
         return roles;
     }
 
-    public void setRoles(List<Role> roles) {
+    public void setRoles(List<RoleEntity> roles) {
         this.roles = roles;
     }
 

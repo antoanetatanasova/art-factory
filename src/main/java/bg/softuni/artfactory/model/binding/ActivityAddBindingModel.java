@@ -2,7 +2,7 @@ package bg.softuni.artfactory.model.binding;
 
 import org.hibernate.validator.constraints.Length;
 
-import static bg.softuni.artfactory.constant.Constants.*;
+import static bg.softuni.artfactory.common.constant.Constants.*;
 
 import javax.validation.constraints.NotNull;
 

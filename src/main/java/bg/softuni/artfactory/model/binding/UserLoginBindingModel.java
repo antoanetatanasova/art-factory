@@ -1,5 +1,6 @@
 package bg.softuni.artfactory.model.binding;
 
+import static bg.softuni.artfactory.common.constant.Constants.*;
 import org.hibernate.validator.constraints.Length;
 
 import javax.validation.constraints.Email;
@@ -7,14 +8,17 @@ import javax.validation.constraints.NotNull;
 
 public class UserLoginBindingModel {
 
+    @NotNull(message = MANDATORY_FIELD)
+    @Email(message = INVALID_FORMAT)
     private String email;
+    @NotNull
+    @Length(min = 3, message = MIN_LENGTH)
+    @Length(max = 20, message = MAX_LENGTH)
     private String password;
 
     public UserLoginBindingModel() {
     }
 
-    @NotNull
-    @Email(message = "Невалиден формат")
     public String getUsername() {
         return email;
     }
@@ -23,9 +27,6 @@ public class UserLoginBindingModel {
         this.email = email;
     }
 
-    @NotNull
-    @Length(min = 3, message = "Паролата трябва да бъде по-дълга от {min} символа!")
-    @Length(max = 20, message = "Паролата трябва да бъде по-кратка от {max} символа!")
     public String getPassword() {
         return password;
     }

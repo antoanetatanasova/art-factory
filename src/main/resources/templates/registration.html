@@ -10,27 +10,30 @@
     </section>
 </header>
 <main>
-    <form action="/action_page.php">
-        <div class="container">
-            <h2>Регистриране на нов потребител</h2>
-            <p>Попълнете формата, за да създадете нов профил, или <a href="#">ВХОД</a>, ако вече имате регистрация.</p>
-            <hr>
-
-            <label for="email"><b></b></label>
-            <input type="text" placeholder="Email" name="email" id="email" required>
-
-            <label for="psw"><b></b></label>
-            <input type="password" placeholder="Парола" name="psw" id="psw" required>
-
-            <label for="psw-repeat"><b></b></label>
-            <input type="password" placeholder="Потвърдете паролата" name="psw-repeat" id="psw-repeat" required>
-            <hr>
-            <p>Създавайки профил, Вие се съгласявате с нашите<a href="#">Условия за ползване на сайта и Политика на
-                поверителност на данните</a>.</p>
-
+    <h2 class="text-center">Регистрация</h2>
+    <div class="text-center"><p>Ако вече имате потребителски профил, продължете към <a th:href="@{/login}">ВХОД</a>.</p></div>
+    <form class="mx-auto w-25 p-2" th:action="@{/registration}" method="post" th:object="${formData}">
+        <div class="input-group justify-content-center">
+            <hr class="hr-3"/>
+            <label for="email" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Имейл</label>
+            <input name="email" type="text"
+                   class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7"
+                   id="email" placeholder="Имейл" required>
+        </div>
+        <div class="input-group mt-3">
+            <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Парола</label>
+            <input name="password" type="password" class="form-control validate"
+                   id="password" placeholder="Парола" required>
+        </div>
+        <div class="input-group mt-3">
+            <label for="repeatPassword" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Паролата пак</label>
+            <input name="repeatPassword" type="password" class="form-control validate"
+                   id="repeatPassword" th:errorclass="is-invalid" placeholder="Потвърдете паролата" required>
+        </div>
+        <hr/>
+        <div class="input-group mt-3 justify-content-center">
             <button type="submit" class="registerbtn">РЕГИСТРАЦИЯ</button>
         </div>
-
     </form>
 </main>
 <footer>

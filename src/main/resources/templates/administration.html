@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
+<main>
+    <h2 class="text-center">Администрация</h2>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-2">
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-primary">Съобщения</button>
+                    <button type="button" class="btn btn-primary">Работилници</button>
+                    <button type="button" class="btn btn-primary">Ваучери</button>
+                    <button type="button" class="btn btn-primary">Видео уроци</button>
+                    <button type="button" class="btn btn-primary">Услуги</button>
+                    <button type="button" class="btn btn-primary">Потребители</button>
+                </div>
+            </div>
+            <div class="col-sm-10">
+                Някакъв текст тук.
+            </div>
+
+        </div>
+    </div>
+</main>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
+</body>
+</html>
