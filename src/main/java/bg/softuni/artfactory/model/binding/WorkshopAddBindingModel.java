@@ -2,13 +2,16 @@ package bg.softuni.artfactory.model.binding;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.URL;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.FutureOrPresent;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import java.math.BigDecimal;
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 import static bg.softuni.artfactory.common.constant.Constants.*;
 
@@ -25,10 +28,12 @@ public class WorkshopAddBindingModel {
     @DecimalMin(value = "0", message = INVALID_NUMBER)
     private BigDecimal price;
     @NotNull(message = MANDATORY_FIELD)
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     @FutureOrPresent(message = INVALID_DATE_TIME)
     private LocalDateTime startsOn;
     @NotNull(message = MANDATORY_FIELD)
     @FutureOrPresent(message = INVALID_DATE_TIME)
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     private LocalDateTime endsOn;
     @NotNull(message = MANDATORY_FIELD)
     @Min(value = 1, message = INVALID_NUMBER)

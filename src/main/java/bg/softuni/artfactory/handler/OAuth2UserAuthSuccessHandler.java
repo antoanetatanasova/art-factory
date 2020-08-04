@@ -27,7 +27,7 @@ public class OAuth2UserAuthSuccessHandler extends SavedRequestAwareAuthenticatio
     this.userService = userService;
     this.userDetailsService = userDetailsService;
 
-    setDefaultTargetUrl("/home");
+    setDefaultTargetUrl("/");
   }
 
   @Override

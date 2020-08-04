@@ -14,10 +14,12 @@
 
     <h2>Видео уроци</h2>
     <p>
-    <div class="text bg-warning justify-content-center"><img
-            src="https://res.cloudinary.com/the-potential/image/upload/v1596288668/art-factory/icons/warning_jvswhm.png"
-            width="50px">Съдържанието на видео уроците е безплатно, но е достъпно само за регистрирани потребители.
-        Изберете ВХОД или РЕГИСТРАЦИЯ.
+    <div sec:authorize="isAnonymous()">
+        <div class="text bg-warning justify-content-center"><img
+                src="https://res.cloudinary.com/the-potential/image/upload/v1596288668/art-factory/icons/warning_jvswhm.png"
+                width="50px">Съдържанието на видео уроците е безплатно, но е достъпно само за регистрирани потребители.
+            Изберете ВХОД или РЕГИСТРАЦИЯ.
+        </div>
     </div>
     </p>
     <div class="container-fluid">
