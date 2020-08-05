@@ -12,7 +12,7 @@ import javax.validation.constraints.NotBlank;
 @FieldMatch(first = "password",
         second = "repeatPassword",
         message = "The passwords do not match")
-public class UserRegistrationBindingModel {
+public class RegistrationDTO {
 
     @Email
     @NotBlank
@@ -24,7 +24,7 @@ public class UserRegistrationBindingModel {
     @NotBlank
     private String repeatPassword;
 
-    public UserRegistrationBindingModel() {
+    public RegistrationDTO() {
     }
 
     public String getEmail() {
@@ -50,5 +50,4 @@ public class UserRegistrationBindingModel {
     public void setRepeatPassword(String repeatPassword) {
         this.repeatPassword = repeatPassword;
     }
-
 }

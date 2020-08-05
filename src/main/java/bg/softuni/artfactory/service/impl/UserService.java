@@ -3,7 +3,7 @@ package bg.softuni.artfactory.service.impl;
 import bg.softuni.artfactory.model.entity.RoleEntity;
 import bg.softuni.artfactory.model.entity.UserEntity;
 import bg.softuni.artfactory.repository.UserRepository;
-import bg.softuni.artfactory.service.UserService;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -19,7 +19,7 @@ import java.util.Objects;
 import java.util.Optional;
 
 @Service
-public class UserServiceImpl implements UserService {
+public class UserService {
 
   private final UserRepository userRepository;
 
@@ -27,34 +27,31 @@ public class UserServiceImpl implements UserService {
 
   private final UserDetailsService userDetailsService;
 
-  public UserServiceImpl(UserRepository userRepository, PasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
+  public UserService(UserRepository userRepository, PasswordEncoder passwordEncoder, UserDetailsService userDetailsService) {
     this.userRepository = userRepository;
     this.passwordEncoder = passwordEncoder;
     this.userDetailsService = userDetailsService;
   }
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(UserService.class);
 
-  @Override
   public boolean existsUser(String email) {
     Objects.requireNonNull(email);
 
     return userRepository.findOneByEmail(email).isPresent();
   }
 
-  @Override
   public UserEntity getOrCreateUser(String email) {
 
     Objects.requireNonNull(email);
 
-    Optional<UserEntity> userOpt =
+    Optional<UserEntity> userEntityOpt =
         userRepository.findOneByEmail(email);
 
-    return userOpt.
+    return userEntityOpt.
         orElseGet(() -> createUser(email));
   }
 
-  @Override
   public void createAndLoginUser(String email, String password) {
     UserEntity newUser = createUser(email, password);
     UserDetails userDetails = userDetailsService.loadUserByUsername(newUser.getEmail());

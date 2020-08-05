@@ -16,17 +16,17 @@ public class LoginController {
         return "login";
     }
 
-    @PostMapping("/login-error")
-    public ModelAndView onLoginError(
-            @ModelAttribute(UsernamePasswordAuthenticationFilter.
-                    SPRING_SECURITY_FORM_USERNAME_KEY) String email
-    ) {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.addObject("error", "bad.credentials");
-        modelAndView.addObject("username", email);
-        modelAndView.setViewName("login");
-
-        return modelAndView;
-    }
+//    @PostMapping("/login-error")
+//    public ModelAndView onLoginError(
+//            @ModelAttribute(UsernamePasswordAuthenticationFilter.
+//                    SPRING_SECURITY_FORM_USERNAME_KEY) String email
+//    ) {
+//        ModelAndView modelAndView = new ModelAndView();
+//        modelAndView.addObject("error", "bad.credentials");
+//        modelAndView.addObject("username", email);
+//        modelAndView.setViewName("login");
+//
+//        return modelAndView;
+//    }
 
 }

@@ -16,19 +16,22 @@
         <div class="input-group justify-content-center">
             <hr class="hr-3"/>
             <label for="email" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Имейл</label>
-            <input name="email" type="text"
+            <input name="email" th:value="*{email}"
+                   th:errorclass="is-invalid" type="email"
                    class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7"
                    id="email" placeholder="Имейл" required>
+            <div class="invalid-feedback">Този имейл е невалиден или с него вече е регистриран потребител.</div>
         </div>
         <div class="input-group mt-3">
             <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Парола</label>
-            <input name="password" type="password" class="form-control validate"
+            <input name="password" th:errorclass="is-invalid" type="password" class="form-control validate"
                    id="password" placeholder="Парола" required>
         </div>
         <div class="input-group mt-3">
             <label for="repeatPassword" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Паролата пак</label>
             <input name="repeatPassword" type="password" class="form-control validate"
                    id="repeatPassword" th:errorclass="is-invalid" placeholder="Потвърдете паролата" required>
+            <div class="invalid-feedback">Паролите не съвпадат.</div>
         </div>
         <hr/>
         <div class="input-group mt-3 justify-content-center">

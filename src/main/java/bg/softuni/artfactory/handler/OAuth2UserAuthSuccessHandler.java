@@ -1,12 +1,12 @@
 package bg.softuni.artfactory.handler;
 
 import bg.softuni.artfactory.model.entity.UserEntity;
-import bg.softuni.artfactory.service.UserService;
+import bg.softuni.artfactory.service.impl.UserDetailsServiceImpl;
+import bg.softuni.artfactory.service.impl.UserService;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
@@ -20,10 +20,10 @@ import java.io.IOException;
 public class OAuth2UserAuthSuccessHandler extends SavedRequestAwareAuthenticationSuccessHandler {
 
   private final UserService userService;
-  private final UserDetailsService userDetailsService;
+  private final UserDetailsServiceImpl userDetailsService;
 
   public OAuth2UserAuthSuccessHandler(UserService userService,
-                                      UserDetailsService userDetailsService) {
+                                      UserDetailsServiceImpl userDetailsService) {
     this.userService = userService;
     this.userDetailsService = userDetailsService;
 

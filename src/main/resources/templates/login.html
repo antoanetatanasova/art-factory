@@ -11,8 +11,14 @@
 </header>
 <main>
     <h2 class="text-center">Вход</h2>
-    <div class="text-center"><p>Ако нямате потребителски профил, направете <a th:href="@{/registration}">РЕГИСТРАЦИЯ</a>.</p></div>
-    <form class="mx-auto w-25 p-2" th:action="@{/login/authenticate}" method="post">
+    <div class="text-center"><p>Ако нямате потребителски профил, направете <a th:action="@{/registration}" th:href="@{/registration}">РЕГИСТРАЦИЯ</a>.</p></div>
+    <div th:if="${param.error}">
+        Invalid username and password.
+    </div>
+    <div th:if="${param.logout}">
+        You have been logged out.
+    </div>
+    <form class="mx-auto w-25 p-2" th:action="@{/login}" method="post">
         <div class="input-group justify-content-center">
             <hr class="hr-3"/>
             <div th:if="${error}" class="alert alert-danger" role="alert">
@@ -21,7 +27,7 @@
             <label for="username" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Имейл</label>
             <input name="username" type="text"
                    class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7"
-                   id="username" placeholder="Имейл" required>
+                   id="username" th:value="${username}" placeholder="Имейл" required>
         </div>
         <div class="input-group mt-3">
             <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Парола</label>
