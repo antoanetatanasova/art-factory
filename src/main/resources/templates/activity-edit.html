@@ -9,8 +9,9 @@
 </nav>
 <main>
     <h2 class="text-center">Създаване на услуга</h2>
+    <div th:object="${activity}">
     <form class="mx-auto w-25 p-2 rounded text-center"
-          th:action="@{add}" th:method="POST" th:object="${activityAddBindingModel}">
+          th:action="@{/activity/add}" th:method="POST" th:object="${activityAddBindingModel}">
         <div class="form-group">
             <div class="text-dark label-holder d-flex justify-content-center">
                 <label for="name" class="h5 mb-2">Заглавие</label>

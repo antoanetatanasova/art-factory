@@ -30,6 +30,16 @@ public class ActivityServiceImpl implements ActivityService {
     }
 
     @Override
+    public void editActivity(ActivityServiceModel activityServiceModel, Long id) {
+
+
+        Activity activity = this.activityRepository.findFirstById(id);
+        activity = this.modelMapper
+                .map(activityServiceModel, Activity.class);
+        this.activityRepository.saveAndFlush(activity);
+    }
+
+    @Override
     public List<ActivityViewModel> findAllActivities() {
         return this.activityRepository.findAll().stream().map(activity -> this.modelMapper
                 .map(activity, ActivityViewModel.class))

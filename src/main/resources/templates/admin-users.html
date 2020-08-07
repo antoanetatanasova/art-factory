@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="bg" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <th:block th:include="~{fragments/head}"></th:block>
+</head>
+<body>
+<header>
+    <section class="navigation">
+        <th:block th:include="~{fragments/nav}"></th:block>
+    </section>
+</header>
+<main>
+    <h2 class="text-center">Администрация</h2>
+    <div class="container-fluid">
+        <div class="row">
+                <th:block th:include="~{fragments/admin-nav}"></th:block>
+        </div>
+        <hr>
+            <div class="container-fluid justify-content-center">
+                <h2 class="text-center">Потребители</h2>
+                <table style="width:100%">
+                    <tr th:each="u : ${users}" th:object="${u}">
+                        <td><span th:text="|Id: *{id}|"></span></td>
+                        <td><span th:text="|Email: *{email}|"></span></td>
+                        <td><span th:each="role : *{roles}" th:text="${role}"></span></td>
+                        <td><span th:href="@{/administration/users/edit/{id}(id = *{id})}"
+                                  class="btn btn-warning">Edit Role</span></td>
+                        <td><a th:href="@{/administration/users/delete/{id}(id = *{id})}"
+                               class="btn btn-danger">Delete</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+</main>
+<footer>
+    <th:block th:include="~{fragments/footer}"></th:block>
+</footer>
+</body>
+</html>

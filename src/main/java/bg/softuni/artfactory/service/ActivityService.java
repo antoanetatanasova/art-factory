@@ -9,6 +9,8 @@ public interface ActivityService {
 
     void addActivity(ActivityServiceModel activityServiceModel);
 
+    void editActivity(ActivityServiceModel activityServiceModel, Long id);
+
     List<ActivityViewModel> findAllActivities();
 
 }

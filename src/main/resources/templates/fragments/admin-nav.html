@@ -1,0 +1,14 @@
+<html xmlns:th="https://www.thymeleaf.org/">
+<html xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<div sec:authorize="hasRole('ROLE_ADMIN')">
+    <div class="admin-nam justify-content-center">
+        <div class="btn-group">
+            <button type="button" class="btn btn-outline-secondary">Съобщения</button>
+            <button type="button" class="btn btn-outline-secondary">Работилници</button>
+            <button type="button" class="btn btn-outline-secondary">Ваучери</button>
+            <button type="button" class="btn btn-outline-secondary">Видео уроци</button>
+            <button type="button" class="btn btn-outline-secondary"><a th:href="@{/administration/activities}">Услуги</a></button>
+            <button type="button" class="btn btn-outline-secondary"><a th:href="@{/administration/users}">Потребители</a></button>
+        </div>
+    </div>
+</div>

@@ -365,6 +365,24 @@ a {
     min-width: 100px;
 }
 
+/*Table*/
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/*End of Table style*/
+
 /* Error page */
 .wrong-address {
     position: absolute;
@@ -380,4 +398,10 @@ footer {
 footer p {
     text-align: center;
     color: white;
+}
+
+.hide-me {
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(.75);
 }
