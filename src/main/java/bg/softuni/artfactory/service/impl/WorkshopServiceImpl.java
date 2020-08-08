@@ -32,7 +32,8 @@ public class WorkshopServiceImpl implements WorkshopService {
 
     @Override
     public List<WorkshopViewModel> findAllWorkshops() {
-        return this.workshopRepository.findAll().stream().map(workshop -> this.modelMapper
+        List<Workshop> workshops = this.workshopRepository.findAll();
+        return workshops.stream().map(workshop -> this.modelMapper
                 .map(workshop, WorkshopViewModel.class))
                 .collect(Collectors.toList());
     }

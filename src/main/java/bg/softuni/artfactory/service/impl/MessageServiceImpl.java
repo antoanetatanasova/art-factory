@@ -9,6 +9,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class MessageServiceImpl implements MessageService {
@@ -30,7 +31,9 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public List<MessageViewModel> findAllMessages() {
-        return null;
+        return this.messageRepository.findAll().stream().map(message -> this.modelMapper
+                .map(message, MessageViewModel.class))
+                .collect(Collectors.toList());
     }
 
     @Override
@@ -40,6 +43,5 @@ public class MessageServiceImpl implements MessageService {
 
     @Override
     public void delete(Long id) {
-
     }
 }
